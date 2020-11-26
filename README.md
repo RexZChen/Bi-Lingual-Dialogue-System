@@ -2,7 +2,8 @@
 Project check-in's for Georgetown COSC 483
 
 ## authors: 
-[Zirong Chen](https://github.com/RexZChen); [Haotian Xue](https://github.com/HaotianXue)
+[Zirong Chen](https://github.com/RexZChen); 
+[Haotian Xue](https://github.com/HaotianXue)
 
 ## Log:
 
