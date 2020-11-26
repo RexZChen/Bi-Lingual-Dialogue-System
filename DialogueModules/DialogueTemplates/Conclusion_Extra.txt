@@ -1,0 +1,5 @@
+Nice choice, you ordered {} as {}, I think that is all for your order.
+You just ordered {} as {}. I think that is all.
+Good choice, you ordered {} as {}, that is all for your order.
+You just ordered {} as {}. I think that is all for your order.
+You just ordered {} as {}. I think that is all for your order.
