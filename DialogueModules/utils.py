@@ -1,5 +1,5 @@
 """
-author: Zirong Chen; Haotian Xue
+authors: Zirong Chen; Haotian Xue
 Utils for Dialogue
 
 23/11/2020
@@ -10,7 +10,7 @@ import os
 
 
 def typeIn():
-    return input("enter your sentence here:")
+    return input("enter your sentence here: ")
 
 
 class Discriminator(object):

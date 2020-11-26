@@ -1,11 +1,14 @@
 from DialogueManagement import initializeRes
+import DialogueManagement
+#
 
-initializeRes("TempRes/")
+# initializeRes("TempRes/")
 
-# DM = DialogueManagement.DialogueManager()
-# utterance = 'hi'
-# DM.load(utterance=utterance)
-# print(DM.getAction())
+DM = DialogueManagement.DialogueManager()
+utterance = 'aa'
+DM.load(utterance=utterance)
+# print(DM.tell())
+# print(DM.getAction(lastIntent=''))
 
 
 # import os

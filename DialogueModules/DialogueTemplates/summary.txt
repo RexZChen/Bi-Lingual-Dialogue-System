@@ -1,0 +1,3 @@
+Okay, here is your order: one {} bread sandwich with {} as cheese, {} as vegetable, {} as sauce and with extra {}! Come back soon!
+Fantastic, your order is: one {} bread sandwich with {} as cheese, {} as vegetable, {} as sauce and with extra {}! Thanks for visiting!
+Cool, you just ordered: one {} bread sandwich with {} sauce, {} as cheese, {} as vegetable and with extra {}! Have a good day!
