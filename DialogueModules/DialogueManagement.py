@@ -6,7 +6,6 @@ DM for Dialogue System
 """
 import os
 from utils import randomizeAction
-from colorModule import bcolors
 
 
 class DialogueManager(object):
@@ -15,7 +14,6 @@ class DialogueManager(object):
         self.namespace = [file[:-4] for file in os.listdir('IntentDetails/')]
         self.orderSequence = ['bread', 'cheese', 'vegetable', 'sauce', 'extra']
         self.currentDir = 'TempRes/'
-        self.warning = False
 
     def load(self, utterance):
         self.utterance = utterance
@@ -30,7 +28,7 @@ class DialogueManager(object):
         """
         flag = "UKN"
         keyword = None
-        self.warning = False
+        warning = False
 
         initial_utterance = self.utterance.lower()
         utterance = initial_utterance.split(" ")
@@ -51,21 +49,14 @@ class DialogueManager(object):
         # Human-in-loop error handling
         # TODO: new intentions need to be fixed
         if flag == 'UKN':
-            self.warning = True
+            warning = True
             namestring = ""
             for name in self.namespace:
                 namestring = namestring + name + ", "
 
-            print(f"{bcolors.FAIL}-- Warning, This system currently can not interpret your input --{bcolors.ENDC}")
-            print(f"{bcolors.HEADER}-- It needs your idea on your input intent for further learning --{bcolors.ENDC}")
-            print(f"{bcolors.WARNING}-- However, your conversation will be continued --{bcolors.ENDC}")
-
             intent = input(
-                "Fail to map this sentence: \" {} \" to existing intents: {} what is your intention? \n".format(
+                "Fail to map this sentence: \" {} \" to existing intents: {} what is your idea on this? \n ".format(
                     initial_utterance, namestring))
-            keyword = input(
-                "In addtion to intention, what is the keyword in your input? Remember to keep it unique! \n"
-            )
             fname = 'IntentDetails/{}.txt'.format(intent)
 
             with open(fname, 'a+', encoding='utf-8') as f:
@@ -75,7 +66,7 @@ class DialogueManager(object):
             if intent not in self.namespace:
                 self.namespace.append(intent)
 
-        return flag, keyword, self.warning
+        return flag, keyword, warning
 
     def getAction(self, lastIntent):
         """

@@ -7,11 +7,10 @@ Utils for Dialogue
 import translators as ts
 import random
 import os
-from colorModule import bcolors
 
 
 def typeIn():
-    return input(f"{bcolors.OKBLUE}Enter your sentence here: {bcolors.ENDC}")
+    return input("enter your sentence here: ")
 
 
 class Discriminator(object):

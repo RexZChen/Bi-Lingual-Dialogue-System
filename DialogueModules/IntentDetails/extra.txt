@@ -1,1 +1,1 @@
-beef, chicken, pork, pepperoni, bacon,bacon, 
+beef, chicken, pork, pepperoni, bacon
