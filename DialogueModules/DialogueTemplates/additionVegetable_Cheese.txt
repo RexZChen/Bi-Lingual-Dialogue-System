@@ -1,5 +1,0 @@
-Nice choice, you ordered {} as {}, anything else for vegetable?
-You just ordered {} as {}. What else do you need for vegetable?
-Good choice, you ordered {} as {}, anything else for vegetable?
-You just ordered {} as {}. What else for vegetable?
-You just ordered {} as {}. Anything other things you need to add for vegetable?

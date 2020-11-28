@@ -10,7 +10,7 @@ import os
 
 
 def typeIn():
-    return input("enter your sentence here: ")
+    return input(f"{bcolors.OKBLUE}Enter your sentence here: {bcolors.ENDC}")
 
 
 class Discriminator(object):
@@ -72,3 +72,26 @@ def initializeRes(dir):
     open(dir + 'sauce.txt', 'w')
     open(dir + 'extra.txt', 'w')
     open(dir + 'vegetable.txt', 'w')
+
+
+class bcolors:
+    HEADER = '\033[95m'
+    OKBLUE = '\033[94m'
+    OKCYAN = '\033[96m'
+    OKGREEN = '\033[92m'
+    WARNING = '\033[93m'
+    FAIL = '\033[91m'
+    ENDC = '\033[0m'
+    BOLD = '\033[1m'
+    UNDERLINE = '\033[4m'
+
+
+def welcome():
+    print(
+        f"{bcolors.HEADER} ######################## Welcome to Bi-Lingual Ordering System! ########################{bcolors.ENDC} \n"
+        f"{bcolors.HEADER} ########################### Authors: Zirong Chen, Haotian Xue ########################## {bcolors.ENDC} \n"
+        f"{bcolors.OKGREEN} ------------------ ##### Check order details under DIR: TepRes/ ##### ------------------ {bcolors.ENDC} \n"
+        f"{bcolors.OKGREEN} ------------------ ### Check score details under DIR: UserScores/ ### ------------------ {bcolors.ENDC} \n"
+        f"{bcolors.OKBLUE} ### See the menu @ https://www.subway.com/en-US/MenuNutrition/Menu/BreadsAndToppings ###{bcolors.ENDC} \n"
+        f"{bcolors.HEADER} ################################# NOW, TIME TO BEGIN! ################################## {bcolors.ENDC} \n"
+    )
