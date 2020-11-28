@@ -2,6 +2,7 @@
 authors: Zirong Chen, Haotian Xue
 Evaluator for Dialogue System
 
+<<<<<<< HEAD
 11/27/2020
 """
 from colorModule import bcolors
@@ -32,3 +33,9 @@ class Evaluator(object):
             f.write(str(total_score) + ", ")
 
         return total_score
+=======
+11/25/2020
+"""
+
+# TODO: Evaluator for Dialogue System
+>>>>>>> 4c8f06d8e8454ea42ce6b21c8ab7de2d72e05588

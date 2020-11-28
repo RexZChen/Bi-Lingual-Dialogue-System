@@ -2,7 +2,7 @@
 authors: Zirong Chen; Haotian Xue
 Main Session for Dialogue
 
-23/11/2020
+Date: 23/11/2020
 """
 from utils import GoogleTranslator, typeIn, Discriminator, initializeRes
 import DialogueManagement
