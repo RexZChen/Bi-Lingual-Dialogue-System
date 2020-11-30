@@ -4,7 +4,7 @@ Evaluator for Dialogue System
 
 11/27/2020
 """
-from utils import bcolors
+from utils import bcolors, Sigmoid
 
 
 class Evaluator(object):
@@ -15,7 +15,7 @@ class Evaluator(object):
         self.turn_penalty = turn_penalty
         self.user_experience = None
         self.user_name = "anonymous"
-        self.score_factor = score_factor
+        self.score_factor = Sigmoid(score_factor)
 
     def getScores(self):
         self.user_name = input(f"{bcolors.OKCYAN}What is your preferred name? {bcolors.ENDC}")
@@ -32,7 +32,7 @@ class Evaluator(object):
         turn_score = self.turn_penalty * self.num_of_turns
         task_score = self.task_reward if self.task_completion else -self.task_reward
         user_score = self.user_experience
-        total_score = user_score * self.score_factor + (turn_score + task_score)
+        total_score = user_score * self.score_factor + (turn_score + task_score) * (1 - self.score_factor)
 
         fname = "UserScores/{}.txt".format(self.user_name)
         with open(fname, 'a+', encoding='utf-8') as f:

@@ -7,6 +7,7 @@ Utils for Dialogue
 import translators as ts
 import random
 import os
+import numpy as np
 
 
 def typeIn():
@@ -95,3 +96,8 @@ def welcome():
         f"{bcolors.OKBLUE} ### See the menu @ https://www.subway.com/en-US/MenuNutrition/Menu/BreadsAndToppings ###{bcolors.ENDC} \n"
         f"{bcolors.HEADER} ################################# NOW, TIME TO BEGIN! ################################## {bcolors.ENDC} \n"
     )
+
+
+def Sigmoid(X):
+    s = 1 / (1 + np.exp(-X))
+    return s
