@@ -55,6 +55,16 @@ class GoogleTranslator(object):
         return ts.google(self.utterance, from_language=self.src, to_language=self.dest)
 
 
+class BingTranslator(object):
+    def __init__(self, utterance, src, dest):
+        self.src = src
+        self.dest = dest
+        self.utterance = utterance
+
+    def getTranslation(self):
+        return ts.bing(self.utterance, from_language=self.src, to_language=self.dest)
+
+
 def randomizeAction(file):
     template = []
     with open(file, 'r', encoding='utf-8') as f:

@@ -32,7 +32,8 @@ class DialogueManager(object):
         self.warning = False
 
         initial_utterance = self.utterance.lower()
-        utterance = initial_utterance.split(" ")
+        # utterance = initial_utterance.split(" ")
+        utterance = initial_utterance
 
         reference = {}
         for name in self.namespace:
@@ -43,7 +44,7 @@ class DialogueManager(object):
 
         for intent in reference.keys():
             for option in reference[intent]:
-                if option in utterance:
+                if option != "" and option in utterance:
                     keyword = option
                     flag = intent
 
