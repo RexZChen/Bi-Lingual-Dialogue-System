@@ -1,6 +1,10 @@
 """
+authors: Zirong Chen, Haotian Xue
 
+colorModules for UI
+24/11/2020
 """
+
 
 class bcolors:
     HEADER = '\033[95m'

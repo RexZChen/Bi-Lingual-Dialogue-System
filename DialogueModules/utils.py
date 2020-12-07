@@ -1,6 +1,6 @@
 """
 authors: Zirong Chen; Haotian Xue
-Utils for Dialogue
+Utils for Dialogue, including Discriminator, Translator and User Interfaces
 
 23/11/2020
 """
@@ -39,10 +39,6 @@ class Discriminator(object):
                 return "zh"
             else:
                 return "en"
-
-
-class BertTranslator(object):
-    pass
 
 
 class GoogleTranslator(object):

@@ -24,7 +24,7 @@ class DialogueManager(object):
 
     def tell(self):
         """
-        This function is used for the recognition of user utterance
+        This function is used for the recognition of user utterance, or say intention detection
         :return: flag(str, matched intent), keyword(str, matched keyword under intent), warning(boolean, whether new word occurs)
         """
         flag = "UKN"
@@ -33,6 +33,7 @@ class DialogueManager(object):
 
         initial_utterance = self.utterance.lower()
         # utterance = initial_utterance.split(" ")
+        # Here is where the bug is!
         utterance = initial_utterance
 
         reference = {}
@@ -45,11 +46,12 @@ class DialogueManager(object):
         for intent in reference.keys():
             for option in reference[intent]:
                 if option != "" and option in utterance:
+                    # We need to handle invalid options since we do not split user inputs any more.
                     keyword = option
                     flag = intent
 
-        # Human-in-loop error handling
-        # TODO: new intentions need to be fixed
+        # Human-in-the-loop error handling
+        # TODO: relations between new intentions need to be fixed
         if flag == 'UKN':
             self.warning = True
             namestring = ""
@@ -92,7 +94,8 @@ class DialogueManager(object):
 
             next_intent = self.orderSequence[self.orderSequence.index(lastIntent) + 1]
 
-            return randomizeAction('DialogueTemplates/addition_{}_{}.txt'.format(next_intent, lastIntent)).format(keyword, lastIntent), next_intent
+            return randomizeAction('DialogueTemplates/addition_{}_{}.txt'.format(next_intent, lastIntent)).format(
+                keyword, lastIntent), next_intent
 
         if flag == 'decline' and lastIntent == 'extra':
             fname = 'TempRes/{}.txt'.format(lastIntent)
@@ -153,4 +156,5 @@ class DialogueManager(object):
                 for line in f.readlines():
                     res[file[:-4]] = line
 
-        return randomizeAction('DialogueTemplates/summary.txt').format(res['bread'], res['cheese'], res['vegetable'], res['sauce'], res['extra'])
+        return randomizeAction('DialogueTemplates/summary.txt').format(res['bread'], res['cheese'], res['vegetable'],
+                                                                       res['sauce'], res['extra'])
