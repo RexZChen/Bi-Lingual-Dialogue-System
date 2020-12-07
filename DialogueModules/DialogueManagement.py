@@ -45,7 +45,7 @@ class DialogueManager(object):
 
         for intent in reference.keys():
             for option in reference[intent]:
-                if option != "" and option in utterance:
+                if option != "" and option != " " and option in utterance:
                     # We need to handle invalid options since we do not split user inputs any more.
                     keyword = option
                     flag = intent
