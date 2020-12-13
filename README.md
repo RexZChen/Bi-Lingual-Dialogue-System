@@ -33,6 +33,7 @@ See the menu @ https://www.subway.com/en-US/MenuNutrition/Menu/BreadsAndToppings
 
 * Preparations: ``` Python 3.6.x ```, [translators](https://github.com/UlionTse/translators)
 * How to run: ``` python main.py --num_of_turns 10 --task_reward 20 --turn_penalty -1 --score_factor 2 --translator bing ```
+* Report is under /paper directory.
 
 ## Notice:
 
