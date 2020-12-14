@@ -5,6 +5,7 @@ colorModules for UI
 24/11/2020
 """
 
+# Reference: https://stackoverflow.com/questions/287871/how-to-print-colored-text-in-python
 
 class bcolors:
     HEADER = '\033[95m'
