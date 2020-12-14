@@ -1,4 +1,4 @@
-# Bi-Lingual-Ordering-System
+# Bil-DOS: Bi-Lingual-Dialogue-Ordering-System
 Project check-in's for Georgetown COSC 483
 
 See the menu @ https://www.subway.com/en-US/MenuNutrition/Menu/BreadsAndToppings  
