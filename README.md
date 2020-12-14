@@ -37,4 +37,4 @@ See the menu @ https://www.subway.com/en-US/MenuNutrition/Menu/BreadsAndToppings
 
 ## Notice:
 
-* Google Translator might not work due to **high volume** of current user requests. In order to avoid request failure, now the Translator module supports multiple backends. Currently(v 0.1.6), the module has **Google** and **Bing** as its backup backends. We will add more backends in later versions.
+* Google Translator might not work due to **high volume** of current user requests. In order to avoid request failure, now the Translator module supports multiple backends. Currently(v 0.1.6), the module has **Google** and **Bing** as its backup backends.
